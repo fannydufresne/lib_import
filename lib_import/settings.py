@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import logging.config
+
+from django.utils.log import DEFAULT_LOGGING
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +34,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Local
+    'app',
+
+    # Third party
+    'lib_import',
+    'import_export',
+
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'example.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
@@ -67,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'example.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
@@ -118,3 +129,52 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Logging
+fmt = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+LOGGING_CONFIG = None
+LOGLEVEL = 'DEBUG'
+
+logging.config.dictConfig(
+    {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'default': {
+                'format': fmt,
+            },
+            'django.server': DEFAULT_LOGGING['formatters']['django.server'],
+        },
+        'handlers': {
+            'console': {
+                'level': LOGLEVEL,
+                'class': 'logging.StreamHandler',
+                'formatter': 'default',
+            },
+            'django.server': DEFAULT_LOGGING['handlers']['django.server'],
+        },
+        'loggers': {
+            '': {
+                'level': 'WARNING',
+                'handlers': [
+                    'console'
+                ],
+            },
+            'app': {
+                'level': 'DEBUG',
+                'handlers': [
+                    'console'
+                ],
+                'propagate': False,
+            },
+            'lib_import': {
+                'level': 'DEBUG',
+                'handlers': [
+                    'console'
+                ],
+                'propagate': False,
+            },
+            'django.server': DEFAULT_LOGGING['loggers']['django.server'],
+        },
+    }
+)
