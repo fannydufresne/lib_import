@@ -6,7 +6,7 @@ from import_export import fields
 from import_export.widgets import ForeignKeyWidget
 
 from lib_import.resources import ImportModelResource
-import app.models as m
+import example.models as m
 
 logger = logging.getLogger(__name__)
 

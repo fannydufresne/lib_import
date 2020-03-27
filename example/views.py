@@ -3,8 +3,8 @@ import logging
 
 from lib_import.views import ImportView
 
-from app.resources import ExampleModelResource
-from app.forms import ExampleForm
+from example.resources import ExampleModelResource
+from example.forms import ExampleForm
 
 logger = logging.getLogger(__name__)
 
