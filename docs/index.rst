@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-django_lib_import
+lib_import
 ==================
 
-django_lib_import is a Django library for importing data (file -> database).
+lib_import is a Django library for importing data (file -> database).
 It is based on django-import-export
 
 

@@ -1,4 +1,4 @@
-django_lib_import
+lib_import
 ==================
 
 django_lib_import is a Django library for importing data (file -> database).
