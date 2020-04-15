@@ -20,7 +20,7 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
-        'License :: OSI Approved :: Apache 2.0',
+        'License :: OSI Approved :: Apache Software License',
         'Framework :: Django :: 2.2',
         'Programming Language :: Python :: 3.7',
         'Topic :: Software Development',
