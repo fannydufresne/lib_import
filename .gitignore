@@ -4,3 +4,4 @@
 .hypothesis*
 cover/*
 .coverage
+docs/_build/*

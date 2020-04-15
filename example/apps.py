@@ -1,4 +1,4 @@
-from django.examples import AppConfig
+from django.apps import AppConfig
 
 
 class AppConfig(AppConfig):
