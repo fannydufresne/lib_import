@@ -7,8 +7,8 @@ setup(
     description='Django library for importing data',
     author='Fanny Dufresne',
     author_email='dufresne.fany@gmail.com',
-    url='',  # TODO: fill in
-    download_url='',  # TODO: fill in
+    url='https://github.com/fannydufresne/lib_import/',
+    download_url='https://github.com/fannydufresne/lib_import/archive/0.0.1.tar.gz',
     keywords=['django', 'import'],
     install_requires=[
         "django >= 2.2",
