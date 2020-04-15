@@ -8,7 +8,7 @@ setup(
     author='Fanny Dufresne',
     author_email='dufresne.fany@gmail.com',
     url='https://github.com/fannydufresne/lib_import/',
-    download_url='https://github.com/fannydufresne/lib_import/archive/0.0.1.tar.gz',
+    download_url='https://github.com/fannydufresne/lib_import/archive/v0.0.1.tar.gz',
     keywords=['django', 'import'],
     install_requires=[
         "django >= 2.2",
