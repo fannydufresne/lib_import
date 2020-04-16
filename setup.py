@@ -11,7 +11,7 @@ setup(
     download_url='https://github.com/fannydufresne/lib_import/archive/v0.0.3.tar.gz',
     keywords=['django', 'import'],
     install_requires=[
-        "django >= 2.2",
+        "django == 2.2",
         "django-import-export == 1.2",
         "tablib >= 0.12",
         "pycontracts >= 1.7",
