@@ -12,9 +12,9 @@ setup(
     keywords=['django', 'import'],
     install_requires=[
         "django >= 2.2",
-        "django-import-export == 1.2"
-        "tablib >= 0.12"
-        "pycontracts >= 1.7"
+        "django-import-export == 1.2",
+        "tablib >= 0.12",
+        "pycontracts >= 1.7",
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
